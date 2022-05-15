@@ -1,0 +1,25 @@
+#Write a program to find the sum of series 1/2-2/3+3/4-4/5+5/6...+N/N+1
+
+
+package Assessment;
+
+import java.util.Scanner;
+
+public class SumOfSeries {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int num=s.nextInt();
+        float sum=0;
+        for(int i=1;i<=num;i++){
+            if((i%2) !=0){
+                sum+=(float) i/  i+1;
+            }
+            else{
+                sum-=(float) i/ i+1;
+            }
+
+        }
+        System.out.println(sum);
+    }
+}
